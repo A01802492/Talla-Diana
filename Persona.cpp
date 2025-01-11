@@ -1,11 +1,12 @@
 #include "Persona.h"
 #include <iostream>
+using namespace std;
 
 Persona::Persona()
 {
-    float estaturaP;
-    float estaturaM;
-    char sexo;
+    estaturaP=0;
+    estaturaM=0;
+    e=0;
 }
 
 void Persona::setEstaturaPapa()
@@ -36,28 +37,33 @@ float Persona::getEstaturaMama()
     return estaturaM;
 }
 
-float Persona::getSexo()
+char Persona::getSexo()
 {
     return sexo;
 }
 
-float Persona::calculaEstatura();
+float Persona::calculaEstatura()
 {
-    switch (sexo){
-        case 'O': break;
-        case 'A': break;
-    
-    if (case O){
-        e = (estaturaP + estaturaM + 13)/2
+    switch (sexo) {
+        case 'O':
+            e = (estaturaP + estaturaM + 13) / 2;
+            break;
+        case 'A':
+            e = (estaturaP + estaturaM - 13) / 2;
+            break;
+        default:
+        
+            break;
     }
-    if (case A){
-        e = (estaturaP + estaturaM - 13)/2
-    }
-
-    }
+    return e;
 }
 
-void imprimeEstatura(float e);
+void Persona::imprimeEstatura(float e)
 {
-    cout<<"La estatura futura del bebé será de: "<<e;
+    cout<<"Tendrá una estatura futura de: "<<e<<endl;
+}
+
+Persona::~Persona()
+{
+
 }

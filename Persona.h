@@ -7,6 +7,7 @@ class Persona
         float estaturaP;
         float estaturaM;
         char sexo;
+        float e;
     
     public:
         Persona();
