@@ -1,9 +1,11 @@
 #include <iostream>
 #include "Persona.h"
+#include <vector>
+#include "Kinder.h"
 
 using namespace std;
 
-int main()
+/*int main()
 {
     Persona P1;
 
@@ -15,4 +17,13 @@ int main()
     cout<<" y de sexo NIÑ"<<P1.getSexo()<<endl;
     P1.imprimeEstatura(P1.calculaEstatura());
 
+}*/
+
+int main()
+{
+    Kinder K;
+
+    K.setDatosVector();
+    K.imprimeVector();
+    return 0;
 }
